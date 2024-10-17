@@ -49,15 +49,17 @@ it('should refer to the plugin itself on each config', () => {
 	});
 });
 
-it('should export configs that refer to actual rules', () => {
+it.todo('should export flat configs that refer to actual rules');
+
+it('should export RC configs that refer to actual rules', () => {
 	const allConfigs = plugin.configs;
 
 	expect(Object.keys(allConfigs)).toEqual([
-		'dom',
-		'angular',
-		'react',
-		'vue',
-		'marko',
+		'dom-legacy',
+		'angular-legacy',
+		'react-legacy',
+		'vue-legacy',
+		'marko-legacy',
 	]);
 	const allConfigRules = Object.values(allConfigs)
 		.map((config) => Object.keys(config.rules))

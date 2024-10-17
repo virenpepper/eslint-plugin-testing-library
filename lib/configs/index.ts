@@ -21,4 +21,4 @@ export default SUPPORTED_TESTING_FRAMEWORKS.reduce(
 		[framework]: getConfigForFramework(framework),
 	}),
 	{}
-) as Record<SupportedTestingFramework, LinterConfigRules>;
+) as Record<SupportedTestingFramework, TSESLint.Linter.Config>;
